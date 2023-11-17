@@ -1,0 +1,32 @@
+@use '../../styles/variables' as v;
+
+.header-content {
+  position: fixed;
+  z-index: 100;
+  border-bottom: 2px solid v.$second_color_weight !important;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,32,105,1) 0%, rgba(204,218,255,1) 53%)!important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0!important;
+  margin: 0 !important;
+  height: 7vh;
+}
+
+.header-h2 {
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  height: 4em !important;
+  width: 6em !important;
+}
+
+.header-menu {
+  margin-left: 0.5em !important;
+  height: 1em !important;
+  width: 1em !important;
+  color: v.$main_color_weight;
+}
