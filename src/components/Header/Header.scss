@@ -3,7 +3,7 @@
 .header-content {
   position: fixed;
   z-index: 100;
-  border-bottom: 2px solid v.$second_color_weight !important;
+  border-bottom: 1px solid v.$second_color_weight!important;
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,32,105,1) 0%, rgba(204,218,255,1) 53%)!important;
   display: flex;
   align-items: center;
@@ -29,4 +29,44 @@
   height: 1em !important;
   width: 1em !important;
   color: v.$main_color_weight;
+}
+
+.header-button {
+  display: none;
+  margin: 0!important;
+}
+
+@media screen and (min-width: 767px) {
+  .header-logo {
+    height: 6em !important;
+    width: 9em !important;
+  }
+
+  .header-menu {
+    margin-left: 1em !important;
+    height: 1.5em !important;
+    width: 1.5em !important;
+  }
+
+  .header-button {
+    display: inline-block;
+  }
+
+  .header-button-login {
+    background-color: v.$main_color_light!important;
+    color: v.$main_color_weight!important;
+  }
+
+  .header-left {
+    flex: 1!important;
+  }
+
+  .header-center {
+    flex: 8!important;
+    justify-content: center;
+  }
+
+  .header-right {
+    flex: 1!important;
+  }
 }

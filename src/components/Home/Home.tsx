@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../store/store';
 
 import fetchFlyerHomeThunks from '../store/thunks/flyerHomeThunks';
+import HomeButton from './HomeButton/HomeButton';
 
 import './Home.scss';
 
@@ -27,7 +28,7 @@ const Home = () => {
     dispatch(fetchFlyerHomeThunks());
   }, [dispatch]);
   return (
-    <div className="Home-content">
+    <div className="home-content">
       <Carousel autoPlay interval={3000} infiniteLoop>
         {flyersList.map((flyer: IFlyer) => (
           <div key={flyer.id} className="carouselSlide">
@@ -35,6 +36,7 @@ const Home = () => {
           </div>
         ))}
       </Carousel>
+      <HomeButton />
     </div>
   );
 };

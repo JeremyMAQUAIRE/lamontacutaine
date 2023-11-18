@@ -1,0 +1,103 @@
+@use '../../../styles/variables' as v;
+
+.buttonsContainer-content{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color : hsla(227, 64%, 15%, 0.6);
+  height: 5.5vh;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.buttonsContainer-one{
+  margin: auto;
+}
+
+.buttonsContainer-round{
+  margin: 0 0.8em;
+  margin-top: -1.5em;
+  border: 1px solid v.$main_color_weight;
+  background-color: white;
+  border-radius: 25px;
+  transform: translateY(0);
+  transition-duration: 1s;
+  animation: enterFromLeft 2.5s ease-in-out;
+}
+
+.buttonsContainer-text{
+  color: v.$main_color_weight;
+  font-size: 0.6em;
+  font-style: oblique;
+  font-weight: 700;
+  background-color: v.$second_color_light;
+  height: auto;
+  padding: 0.2em;
+  border-radius: 15px;
+  opacity: 0;
+  text-align: center;
+}
+
+.buttonsContainer-round:hover{
+  background-color: v.$main_color_weight;
+  transform: translateY(-.5em);
+  transition-duration: 1s;
+}
+
+.buttonsContainer-round:hover ~ .buttonsContainer-text{
+	opacity: 1;
+  transition-duration: 2s;
+}
+
+.buttonsContainer-image{
+  width: 3em;
+  height: 3em;
+  margin: 0 auto;
+  padding: .4em;
+}
+
+@media screen and (min-width: 767px) {
+  .buttonsContainer-content{
+    height: 8vh;
+  }
+
+  .buttonsContainer-round{
+    margin-top: -3em;
+    border: 1px solid v.$main_color_weight;
+    border-radius: 50px;
+    transform: translateY(0px);
+  }
+
+  .buttonsContainer-round:hover{
+    transform: translateY(-1em);
+  }
+
+  .buttonsContainer-image{
+    width: 5em;
+    height: 5em;
+    padding: 1em;
+  }
+
+  .buttonsContainer-text{
+    font-size: 1em;
+  }
+}
+
+@keyframes enterFromLeft {
+  0% {
+    transform: translateX(-200%) translateY(0);
+  }
+  25% {
+    transform: translateX(0) translateY(-80%);
+  }
+  50% {
+    transform: translateX(0) translateY(0%);
+  }
+  75% {
+    transform: translateX(0) translateY(-20%);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
