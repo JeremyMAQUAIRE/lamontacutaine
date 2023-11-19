@@ -48,32 +48,56 @@ function Footer() {
       </Grid>
       <Grid container columns={4} className="footer-container-sponsor">
         <Grid.Column className="footer-link" id="footer-link">
-          <a className="footer-sponsor" href="test">
+          <a
+            className="footer-sponsor"
+            href="https://www.facebook.com/aupetitmarchemontaigut"
+            target="_blanck"
+          >
             <Image className="footer-image" src={sponsorpetitmarche} />
           </a>
         </Grid.Column>
         <Grid.Column className="footer-link" id="footer-link">
-          <a className="footer-sponsor" href="test">
+          <a
+            className="footer-sponsor"
+            href="https://www.facebook.com/Boulangeriemousset"
+            target="_blanck"
+          >
             <Image className="footer-image" src={sponsormousset} />
           </a>
         </Grid.Column>
         <Grid.Column className="footer-link" id="footer-link">
-          <a className="footer-sponsor" href="test">
+          <a
+            className="footer-sponsor"
+            href="https://www.facebook.com/profile.php?id=100064014494320"
+            target="_blanck"
+          >
             <Image className="footer-image" src={sponsorprieur} />
           </a>
         </Grid.Column>
         <Grid.Column className="footer-link" id="footer-link">
-          <a className="footer-sponsor" href="test">
+          <a
+            className="footer-sponsor"
+            href="https://www.facebook.com/IDSElec63"
+            target="_blanck"
+          >
             <Image className="footer-image" src={sponsoridselec} />
           </a>
         </Grid.Column>
         <Grid.Column className="footer-link" id="footer-link">
-          <a className="footer-sponsor" href="test">
+          <a
+            className="footer-sponsor"
+            href="https://jeremy-dev63.fr/"
+            target="_blanck"
+          >
             <Image className="footer-image" src={sponsorjeremydev} />
           </a>
         </Grid.Column>
         <Grid.Column className="footer-link" id="footer-link">
-          <a className="footer-sponsor" href="test">
+          <a
+            className="footer-sponsor"
+            href="https://www.facebook.com/Das63700"
+            target="_blanck"
+          >
             <Image className="footer-image" src={sponsorrestaurantlaposte} />
           </a>
         </Grid.Column>

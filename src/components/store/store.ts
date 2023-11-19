@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import flyerHomeReducer from './reducers/flyerHomeReducer';
+import modalReducer from './reducers/modalReducer.';
 
 const store = configureStore({
   reducer: {
     flyerHomeReducer,
+    modalReducer,
   },
 });
 
