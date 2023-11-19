@@ -1,7 +1,7 @@
 @use '../../styles/variables' as v;
 
 .footer-content {
-  background: linear-gradient(90deg, rgba(186,151,4,1) 0%, rgba(255,251,213,1) 20%, rgba(255,251,213,1) 80%, rgba(186,151,4,1) 100%);
+  background-color: v.$main_color_light;
 }
 
 .footer-container-sponsor {
@@ -12,6 +12,7 @@
 
 .ui.container.doubling.stackable.five.column.grid.footer-container-link{
   align-items: center!important;
+  width: 100%!important;
 }
 
 .button-footer {

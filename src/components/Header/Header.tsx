@@ -1,4 +1,4 @@
-import { Menu } from 'react-feather';
+import { Facebook, Instagram, Menu } from 'react-feather';
 import {
   Header as SemanticHeader,
   Segment,
@@ -21,6 +21,8 @@ const Header = () => {
       </SemanticHeader>
       <SemanticHeader className="header-button header-right">
         <Button className="header-button-login">Se connecter</Button>
+        <Facebook className="header-button-socialNetwork" />
+        <Instagram className="header-button-socialNetwork" />
       </SemanticHeader>
     </Segment>
   );

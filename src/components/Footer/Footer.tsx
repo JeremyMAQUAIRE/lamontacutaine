@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom';
 
 import sponsorpetitmarche from '../../assets/image/sponsors/auPetitMarche.png';
 import sponsormousset from '../../assets/image/sponsors/boulangerieMousset.png';
-import sponsorsauvanet from '../../assets/image/sponsors/etsSauvanet.png';
 import sponsorprieur from '../../assets/image/sponsors/garageDuPrieure.png';
 import sponsoridselec from '../../assets/image/sponsors/isdElec.png';
 import sponsorjeremydev from '../../assets/image/sponsors/jeremyDev63.png';
-import sponsorlecoqdor from '../../assets/image/sponsors/leCoqDOr.png';
 import sponsorrestaurantlaposte from '../../assets/image/sponsors/restaurantDeLaPoste.png';
 
 import './Footer.scss';
@@ -61,11 +59,6 @@ function Footer() {
         </Grid.Column>
         <Grid.Column className="footer-link" id="footer-link">
           <a className="footer-sponsor" href="test">
-            <Image className="footer-image" src={sponsorsauvanet} />
-          </a>
-        </Grid.Column>
-        <Grid.Column className="footer-link" id="footer-link">
-          <a className="footer-sponsor" href="test">
             <Image className="footer-image" src={sponsorprieur} />
           </a>
         </Grid.Column>
@@ -77,11 +70,6 @@ function Footer() {
         <Grid.Column className="footer-link" id="footer-link">
           <a className="footer-sponsor" href="test">
             <Image className="footer-image" src={sponsorjeremydev} />
-          </a>
-        </Grid.Column>
-        <Grid.Column className="footer-link" id="footer-link">
-          <a className="footer-sponsor" href="test">
-            <Image className="footer-image" src={sponsorlecoqdor} />
           </a>
         </Grid.Column>
         <Grid.Column className="footer-link" id="footer-link">
