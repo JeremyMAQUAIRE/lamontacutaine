@@ -97,11 +97,13 @@
 
   .header-right {
     margin-right:0!important;
+    display: flex!important;
+    align-items: center;
   }
 
   .header-button-socialNetwork {
-    width: 2em;
-    height: 2em;
+    width: 2.2em;
+    height: 2.2em;
     padding: .3em;
     margin-left: .5em;
     align-items: center;
