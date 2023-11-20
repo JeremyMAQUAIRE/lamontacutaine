@@ -1,0 +1,70 @@
+@use '../../../styles/variables' as v;
+
+
+.modalMenu {
+  position: fixed;
+  top : 7vh;
+  left: -2.4em;
+}
+
+.dimmer {
+  background-color: rgba(0,0,0,.45)!important;
+}
+
+.ui.vertical.menu {
+  width: 100%!important;
+  font-family: v.$subtitle_font;
+  box-shadow: 4px 5px 5px grey!important;
+}
+
+.modalMenu-iconGif {
+  width: 1.2em;
+  margin-right: 1.5em;
+}
+
+.modalMenu-containerItem {
+  display: flex;
+  transition-duration: 1s;
+  transform: translateX(0);
+  align-items: center;
+}
+
+.modalMenu-containerItem:hover {
+  transition-duration: 1s;
+  transform: translateX(2.4em);
+}
+
+.modalMenu-header {
+  color: v.$second_color_weight;
+  font-weight: 500!important;
+}
+
+.item.active {
+  background-color: v.$main_color_light!important;
+  font-style: italic;
+  font-weight: 800!important;
+}
+
+.modalMenu-item:hover {
+  background-color: v.$second_color_light!important;
+}
+
+@media only screen and (min-width: 768px) {
+  .modalMenu {
+    width: 40em!important;
+  } 
+
+  .modalMenu {
+    left: -3.5em;
+  }
+
+  .modalMenu-containerItem:hover {
+    transition-duration: 1s;
+    transform: translateX(3.5em);
+  }
+  
+
+  .modalMenu-iconGif {
+    width: 2em;
+  }
+}

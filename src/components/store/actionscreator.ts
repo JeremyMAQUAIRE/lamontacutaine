@@ -6,3 +6,7 @@ import { createAction } from '@reduxjs/toolkit';
 export const actionToggleIsOpenModalLogin = createAction(
   '@modal/TOGGLE_ISOPEN_MODAL_LOGIN'
 );
+export const actionToggleIsOpenModalMenu = createAction(
+  '@modal/TOGGLE_ISOPEN_MODAL_MENU'
+);
+

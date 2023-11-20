@@ -12,18 +12,29 @@ import LoginModal from '../Modal/LoginModal/LoginModal';
 
 import './Header.scss';
 import { AppDispatch } from '../store/store';
-import { actionToggleIsOpenModalLogin } from '../store/actionscreator';
+import {
+  actionToggleIsOpenModalLogin,
+  actionToggleIsOpenModalMenu,
+} from '../store/actionscreator';
+import MenuModal from '../Modal/MenuModal/MenuModal';
 
 const Header = () => {
   const dispatch: AppDispatch = useDispatch();
   const handleOpenModalLogin = () => {
     dispatch(actionToggleIsOpenModalLogin());
   };
+  const handleOpenModalMenu = () => {
+    dispatch(actionToggleIsOpenModalMenu());
+  };
   return (
     <>
       <Segment clearing vertical className="header-content">
         <SemanticHeader as="h2" className="header-h2 header-left">
-          <button type="button" className="header-menu-button">
+          <button
+            type="button"
+            className="header-menu-button"
+            onClick={handleOpenModalMenu}
+          >
             <Menu className="header-menu" />
           </button>
         </SemanticHeader>
@@ -48,6 +59,7 @@ const Header = () => {
           </a>
         </SemanticHeader>
       </Segment>
+      <MenuModal />
       <LoginModal />
     </>
   );
