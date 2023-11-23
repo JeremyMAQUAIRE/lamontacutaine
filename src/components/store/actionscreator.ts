@@ -9,4 +9,7 @@ export const actionToggleIsOpenModalLogin = createAction(
 export const actionToggleIsOpenModalMenu = createAction(
   '@modal/TOGGLE_ISOPEN_MODAL_MENU'
 );
+export const actionToggleIsOpenModalNewletter = createAction(
+  '@modal/TOGGLE_ISOPEN_MODAL_NEWLETTER'
+);
 

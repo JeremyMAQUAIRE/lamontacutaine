@@ -2,11 +2,13 @@ import { createReducer } from '@reduxjs/toolkit';
 import {
   actionToggleIsOpenModalLogin,
   actionToggleIsOpenModalMenu,
+  actionToggleIsOpenModalNewletter,
 } from '../actionscreator';
 
 const initialState = {
   isOpenModalLogin: false,
   isOpenModalMenu: false,
+  isOpenModalNewletter: false,
 };
 
 const modalReducer = createReducer(initialState, (builder) => {
@@ -16,6 +18,9 @@ const modalReducer = createReducer(initialState, (builder) => {
     })
     .addCase(actionToggleIsOpenModalMenu, (state) => {
       state.isOpenModalMenu = !state.isOpenModalMenu;
+    })
+    .addCase(actionToggleIsOpenModalNewletter, (state) => {
+      state.isOpenModalNewletter = !state.isOpenModalNewletter;
     });
 });
 

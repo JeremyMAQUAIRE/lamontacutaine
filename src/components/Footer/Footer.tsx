@@ -1,5 +1,8 @@
 import { Grid, Image } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '../store/store';
+import { actionToggleIsOpenModalNewletter } from '../store/actionscreator';
 
 import sponsorpetitmarche from '../../assets/image/sponsors/auPetitMarche.png';
 import sponsormousset from '../../assets/image/sponsors/boulangerieMousset.png';
@@ -7,10 +10,15 @@ import sponsorprieur from '../../assets/image/sponsors/garageDuPrieure.png';
 import sponsoridselec from '../../assets/image/sponsors/isdElec.png';
 import sponsorjeremydev from '../../assets/image/sponsors/jeremyDev63.png';
 import sponsorrestaurantlaposte from '../../assets/image/sponsors/restaurantDeLaPoste.png';
+import NewletterModal from '../Modal/NewletterModal/NewletterModal';
 
 import './Footer.scss';
 
 function Footer() {
+  const dispatch: AppDispatch = useDispatch();
+  const handleOpenModalnewletter = () => {
+    dispatch(actionToggleIsOpenModalNewletter());
+  };
   return (
     <div className="footer-content">
       <Grid
@@ -31,7 +39,11 @@ function Footer() {
           </Link>
         </Grid.Column>
         <Grid.Column className="footer-link" id="footer-link">
-          <button type="button" className="link-a-footer button-footer">
+          <button
+            type="button"
+            onClick={handleOpenModalnewletter}
+            className="link-a-footer button-footer"
+          >
             S&apos;abonner à la newsletter
           </button>
         </Grid.Column>
@@ -102,6 +114,7 @@ function Footer() {
           </a>
         </Grid.Column>
       </Grid>
+      <NewletterModal />
     </div>
   );
 }

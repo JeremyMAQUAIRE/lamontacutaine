@@ -1,0 +1,28 @@
+@use '../../../styles/variables' as v;
+
+.newletterModal-header, .newletterModal-checkbox {
+  text-align: center!important;
+}
+
+.newletterModal-header {
+  background: linear-gradient(90deg, rgba(18,48,136,1) 0%, rgba(204,218,255,1) 20%, rgba(204,218,255,1) 80%, rgba(18,48,136,1) 100%)!important;
+  color: v.$main_color_weight!important;
+}
+
+.newletterModal-label {
+  width: 8em!important;
+}
+
+.newletterModal-content {
+  background-color: v.$main_color_light!important;
+  text-align: center!important;
+}
+
+.newletterModal-actions {
+  background-color: v.$second_color_light!important;
+}
+
+.newletterModal-button {
+  background-color: v.$main_color_light!important;
+  color: v.$second_color_weight!important;
+}
