@@ -1,0 +1,73 @@
+@use '../../styles/variables' as v;
+
+.about-section1, .about-section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center!important;
+}
+
+.about-section2 {
+  background-color: v.$second_color_light;
+  border-top: 2px solid v.$second_color_weight;
+}
+
+.about-section1-title {
+  font-size: 1.5em!important;
+  text-align: center!important;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.about-section2-title {
+  font-size: 1.5em!important;
+  text-align: center!important;
+  padding-top: .8em;
+}
+
+.about-section1-image {
+  height: 20em;
+  width: 25em;
+  margin-top: -8em;
+  margin-bottom: -5em;
+  animation: wiggle 2s linear infinite;
+}
+
+.about-section1-text, .about-section2-text {
+  font-size: 1.1em;
+  padding: 0 1em 1em 1em;
+  text-align: center!important;
+}
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes moveRightToLeft {
+  0% {
+    left: 100%; /* Move to the rightmost position */
+  }
+  100% {
+    left: 0; /* Move back to the original position */
+  }
+}
