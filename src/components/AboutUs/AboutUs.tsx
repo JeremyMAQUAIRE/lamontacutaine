@@ -103,7 +103,7 @@ const AboutUS = () => {
               className="about-section3-column"
             >
               <Segment className="about-section3-segment about-section3-name">
-                BOUSCVERT Emilie
+                BOUSCAVERT Emilie
               </Segment>
               <Segment className="about-section3-segment about-section3-job">
                 Responsable Administrative

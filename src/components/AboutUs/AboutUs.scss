@@ -182,6 +182,11 @@
     width: 35em;
   }
 
+  .about-section2-title, .about-section3-title, .about-section4-title {
+    font-size: 2.5em!important;
+    padding-top: .8em;
+  }
+
   .about-section1-text, .about-section2-text {
     width: 50%;
     font-size: 1.4em;
@@ -195,6 +200,7 @@
     width: 80%;
     margin: .8em!important;
     font-size: 1.2em!important;
+    line-height: 1.5em!important;
   }
 }
 
