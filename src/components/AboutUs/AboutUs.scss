@@ -172,6 +172,33 @@
   border-radius: 5px;
 }
 
+@media (min-width: 768px) {
+  .about-section1-title {
+    font-size: 3em!important;
+  }
+
+  .about-section1-image {
+    height: 30em;
+    width: 35em;
+  }
+
+  .about-section1-text, .about-section2-text {
+    width: 50%;
+    font-size: 1.4em;
+  }
+
+  .about-section2-container-button {
+    flex-wrap: nowrap;
+  }
+
+  .about-section2-button, .about-section4-button-report {
+    width: 80%;
+    margin: .8em!important;
+    font-size: 1.2em!important;
+  }
+}
+
+
 /* Keyframes */
 @keyframes wiggle {
   0%, 7% {
