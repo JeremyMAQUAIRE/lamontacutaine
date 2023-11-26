@@ -1,14 +1,27 @@
 @use '../../styles/variables' as v;
 
 .about-section1, .about-section2 {
+  height : 50vh;
   display: flex;
   flex-direction: column;
   align-items: center!important;
+  justify-content: center;
 }
 
 .about-section2 {
   background-color: v.$second_color_light;
   border-top: 2px solid v.$second_color_weight;
+}
+
+.about-section3 {
+  background-color: v.$main_color_light;
+  border-top: 2px solid v.$main_color_weight;
+}
+
+.about-section4 {
+  background-color: v.$second_color_light;
+  border-top: 2px solid v.$second_color_weight;
+  padding-bottom: 1em;
 }
 
 .about-section1-title {
@@ -18,7 +31,7 @@
   padding-bottom: 1em;
 }
 
-.about-section2-title {
+.about-section2-title, .about-section3-title, .about-section4-title {
   font-size: 1.5em!important;
   text-align: center!important;
   padding-top: .8em;
@@ -36,6 +49,127 @@
   font-size: 1.1em;
   padding: 0 1em 1em 1em;
   text-align: center!important;
+}
+
+.about-section2-container-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-section2-button, .about-section4-button-report {
+  width: 45%;
+  margin: .5em!important;
+  background: linear-gradient(90deg, rgba(255, 251, 213, 1) 0%, rgba(186, 151, 4, 1) 90%)!important;
+  color: v.$second_color_weight!important;
+}
+
+.about-section2-button:hover, .about-section4-button-report:hover {
+  background: linear-gradient(90deg, rgba(255, 251, 213, 1) 60%, rgba(186, 151, 4, 1) 100%)!important;
+  scale: 1.03;
+}
+
+.about-section3-grid {
+  margin: 0!important;
+  width: 90%!important;
+  margin: auto!important;
+  box-shadow: 0 0 0 0!important;
+  border-color: v.$main_color_weight!important;
+}
+
+.about-section3-segment {
+  border: none!important;
+  background-color: transparent!important;
+  box-shadow: 0 0 0 0!important;
+  margin: 0!important;
+  padding: 0.1em 0!important;
+}
+
+.about-section3-name {
+  font-weight: 900;
+}
+
+.about-section3-job {
+  font-style: oblique;
+}
+
+.about-section3-row1 {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: arriveFromLeft 2s ease-in-out forwards;
+  box-shadow: 0 0 0 0!important;
+}
+
+.about-section3-row2 {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: arriveFromLeft 2s ease-in-out forwards;
+  animation-delay: 1s;
+  box-shadow: 0 0 0 0!important;
+}
+
+.about-section3-row3 {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: arriveFromLeft 2s ease-in-out forwards;
+  animation-delay: 2s;
+  box-shadow: 0 0 0 0!important;
+}
+
+.about-section3-row4 {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: arriveFromLeft 2s ease-in-out forwards;
+  animation-delay: 3s;
+  box-shadow: 0 0 0 0!important;
+}
+
+.about-section3-row5 {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: arriveFromLeft 2s ease-in-out forwards;
+  animation-delay: 4s;
+  box-shadow: 0 0 0 0!important;
+}
+
+.about-section3-row6 {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: arriveFromLeft 2s ease-in-out forwards;
+  animation-delay: 5s;
+  box-shadow: 0 0 0 0!important;
+}
+
+.about-section3-column {
+  box-shadow: 0 0 0 0!important;
+}
+
+.about-section4-adobe {
+  margin-top: -1em!important;
+  font-style: italic;
+  font-size: .8em!important;
+  text-align: center;
+}
+
+.about-section4-adobe a {
+  font-size: 1em!important;
+  color: black;
+  padding-left: .2em;
+}
+
+.about-section4-year {
+  min-width: 0!important;
+  width: 8em!important;
+  margin: 0 1em!important;
+}
+
+.about-section4-button-report {
+  width: 18em!important;
+  font-size: 1em;
+  padding: .6em 0!important;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
 }
 
 /* Keyframes */
@@ -63,11 +197,9 @@
   }
 }
 
-@keyframes moveRightToLeft {
-  0% {
-    left: 100%; /* Move to the rightmost position */
-  }
-  100% {
-    left: 0; /* Move back to the original position */
+@keyframes arriveFromLeft {
+  to {
+    opacity: 1; /* À la fin de l'animation, l'opacité est à 1 */
+    transform: translateX(0); /* À la fin de l'animation, l'élément est positionné à sa place d'origine */
   }
 }
