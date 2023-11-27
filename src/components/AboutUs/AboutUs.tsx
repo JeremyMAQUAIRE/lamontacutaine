@@ -1,7 +1,14 @@
-import { Grid, Image, Segment, Select } from 'semantic-ui-react';
-import { useEffect } from 'react';
+import { Grid, Image, Segment, Select, DropdownProps } from 'semantic-ui-react';
+import { MouseEventHandler, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { AppDispatch, RootState } from '../store/store';
+import {
+  actionChangeYearActivityReport,
+  actionChangeYearCountReport,
+  actionChangeYearMoralReport,
+} from '../store/actionscreator';
 
 import logo from '../../assets/logoFull.webp';
 import damien from '../../assets/image/profil/damien.png';
@@ -12,10 +19,12 @@ import fred from '../../assets/image/profil/fred.png';
 import margaux from '../../assets/image/profil/margaux.png';
 
 import './AboutUs.scss';
+import fetchReport from '../store/thunks/reportThunk';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutUS = () => {
+  const dispatch: AppDispatch = useDispatch();
   /* Creation of a table with the years 2022 to today */
   const currentYear = new Date().getFullYear();
   const listYear = Array.from({ length: currentYear - 2021 }, (_, index) => {
@@ -42,6 +51,51 @@ const AboutUS = () => {
       },
     });
   }, []);
+  const handleChangeYearMoralReport = (
+    event: React.SyntheticEvent<HTMLElement, Event>,
+    data: DropdownProps
+  ) => {
+    const selectedYear = data.value as number; // Utilisez data.value pour obtenir la valeur sélectionnée
+    dispatch(actionChangeYearMoralReport(selectedYear));
+  };
+  const handleChangeYearActivityReport = (
+    event: React.SyntheticEvent<HTMLElement, Event>,
+    data: DropdownProps
+  ) => {
+    const selectedYear = data.value as number; // Utilisez data.value pour obtenir la valeur sélectionnée
+    dispatch(actionChangeYearActivityReport(selectedYear));
+  };
+  const handleChangeYearCountReport = (
+    event: React.SyntheticEvent<HTMLElement, Event>,
+    data: DropdownProps
+  ) => {
+    const selectedYear = data.value as number; // Utilisez data.value pour obtenir la valeur sélectionnée
+    dispatch(actionChangeYearCountReport(selectedYear));
+  };
+  const moralYearChoice = useSelector(
+    (state: RootState) => state.reportReducer.yearMoralReport
+  );
+  const moralActivityChoice = useSelector(
+    (state: RootState) => state.reportReducer.yearActivityReport
+  );
+  const moralCountChoice = useSelector(
+    (state: RootState) => state.reportReducer.yearCountReport
+  );
+  const handleUrlReport: MouseEventHandler<HTMLButtonElement> = (event) => {
+    const targetElement = event.target as HTMLElement | null;
+    // On récupére l'année et type dans le bouton
+    if (targetElement && targetElement.textContent !== null) {
+      const { textContent } = targetElement;
+      if (textContent.length >= 4) {
+        // Récupération des 4 derniers caractères
+        const lastFourCharacters = textContent.substr(-4);
+        const year = parseInt(lastFourCharacters, 10);
+
+        const type = textContent.slice(0, -4);
+        dispatch(fetchReport({ type, year }));
+      }
+    }
+  };
   return (
     <div className="aboutUs-content">
       <section className="about-section1">
@@ -218,9 +272,14 @@ const AboutUS = () => {
             placeholder="Année"
             options={listYear}
             className="about-section4-year"
+            onChange={handleChangeYearMoralReport}
           />
-          <button type="button" className="about-section4-button-report">
-            Voir le rapport financier 2022
+          <button
+            type="button"
+            className="about-section4-button-report"
+            onClick={handleUrlReport}
+          >
+            {`Voir le rapport moral ${moralYearChoice}`}
           </button>
         </div>
         <h2 className="about-section4-title" id="activityReport">
@@ -235,9 +294,14 @@ const AboutUS = () => {
             placeholder="Année"
             options={listYear}
             className="about-section4-year"
+            onChange={handleChangeYearActivityReport}
           />
-          <button type="button" className="about-section4-button-report">
-            Voir le rapport d&apos;activité 2022
+          <button
+            type="button"
+            className="about-section4-button-report"
+            onClick={handleUrlReport}
+          >
+            {`Voir le rapport d'activité ${moralActivityChoice}`}
           </button>
         </div>
         <h2 className="about-section4-title" id="financialreport">
@@ -252,9 +316,14 @@ const AboutUS = () => {
             placeholder="Année"
             options={listYear}
             className="about-section4-year"
+            onChange={handleChangeYearCountReport}
           />
-          <button type="button" className="about-section4-button-report">
-            Voir le rapport financier 2022
+          <button
+            type="button"
+            className="about-section4-button-report"
+            onClick={handleUrlReport}
+          >
+            {`Voir le rapport financier ${moralCountChoice}`}
           </button>
         </div>
       </section>

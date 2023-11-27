@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import flyerHomeReducer from './reducers/flyerHomeReducer';
 import modalReducer from './reducers/modalReducer.';
+import reportReducer from './reducers/reportReducer';
 
 const store = configureStore({
   reducer: {
     flyerHomeReducer,
     modalReducer,
+    reportReducer,
   },
 });
 
