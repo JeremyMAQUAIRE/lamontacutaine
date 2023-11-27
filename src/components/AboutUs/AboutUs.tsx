@@ -1,4 +1,7 @@
-import { Button, Grid, Image, Segment, Select } from 'semantic-ui-react';
+import { Grid, Image, Segment, Select } from 'semantic-ui-react';
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import logo from '../../assets/logoFull.webp';
 import damien from '../../assets/image/profil/damien.png';
@@ -10,6 +13,8 @@ import margaux from '../../assets/image/profil/margaux.png';
 
 import './AboutUs.scss';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const AboutUS = () => {
   /* Creation of a table with the years 2022 to today */
   const currentYear = new Date().getFullYear();
@@ -17,6 +22,26 @@ const AboutUS = () => {
     const year = currentYear - index;
     return { key: String(year), value: year, text: String(year) };
   });
+  useEffect(() => {
+    // Faites défiler vers le haut
+    window.scrollTo(0, 0);
+  }, []);
+  useEffect(() => {
+    // Définissez votre animation GSAP ici
+    gsap.to('.about-section3-grid', {
+      opacity: 1,
+      x: 100,
+      duration: 2,
+      ease: 'power2.inOut',
+      scrollTrigger: {
+        trigger: '.about-section3-grid',
+        start: 'top 70%', // Démarrez l'animation
+        end: 'bottom 50%', // Terminez l'animation
+        scrub: 1, // Permet un défilement doux
+        markers: false, // Pour déboguer, affiche des marqueurs de défilement
+      },
+    });
+  }, []);
   return (
     <div className="aboutUs-content">
       <section className="about-section1">
@@ -50,16 +75,25 @@ const AboutUS = () => {
           ouverte à tous.
         </p>
         <div className="about-section2-container-button">
-          <Button className="about-section2-button"> Gouvernance</Button>
-          <Button className="about-section2-button"> Rapports Moraux</Button>
-          <Button className="about-section2-button">
+          <a className="about-section2-button" href="#governance">
+            Gouvernance
+          </a>
+          <a className="about-section2-button" href="#moralReport">
+            {' '}
+            Rapports Moraux
+          </a>
+          <a className="about-section2-button" href="#activityReport">
             Rapports d&apos;activités
-          </Button>
-          <Button className="about-section2-button">Rapports financiers</Button>
+          </a>
+          <a className="about-section2-button" href="#financialreport">
+            Rapports financiers
+          </a>
         </div>
       </section>
       <section className="about-section3">
-        <h2 className="about-section3-title">Gouvernance</h2>
+        <h2 className="about-section3-title" id="governance">
+          Gouvernance
+        </h2>
         <Grid celled className="about-section3-grid">
           <Grid.Row className="about-section3-row1">
             <Grid.Column width={4} verticalAlign="middle">
@@ -172,7 +206,9 @@ const AboutUS = () => {
         </Grid>
       </section>
       <section className="about-section4">
-        <h2 className="about-section4-title">Rapports moraux</h2>
+        <h2 className="about-section4-title" id="moralReport">
+          Rapports moraux
+        </h2>
         <p className="about-section4-adobe">
           Pour lire les pdf, vous pouvez télécharger
           <a href="https://get.adobe.com/fr/reader/">acrobat reader</a>
@@ -187,7 +223,9 @@ const AboutUS = () => {
             Voir le rapport financier 2022
           </button>
         </div>
-        <h2 className="about-section4-title">Rapports des activités</h2>
+        <h2 className="about-section4-title" id="activityReport">
+          Rapports des activités
+        </h2>
         <p className="about-section4-adobe">
           Pour lire les pdf, vous pouvez télécharger
           <a href="https://get.adobe.com/fr/reader/">acrobat reader</a>
@@ -202,7 +240,9 @@ const AboutUS = () => {
             Voir le rapport d&apos;activité 2022
           </button>
         </div>
-        <h2 className="about-section4-title">Rapports financiers</h2>
+        <h2 className="about-section4-title" id="financialreport">
+          Rapports financiers
+        </h2>
         <p className="about-section4-adobe">
           Pour lire les pdf, vous pouvez télécharger
           <a href="https://get.adobe.com/fr/reader/">acrobat reader</a>

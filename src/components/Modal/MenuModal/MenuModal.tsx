@@ -28,13 +28,21 @@ const MenuModal = () => {
     <Modal open={open} onClose={handleOpenModalMenu} className="modalMenu">
       <nav className="modalMenu-nav">
         <div className="ui vertical menu">
-          <NavLink className="item modalMenu-item" to="/qui-sommes-nous">
+          <NavLink
+            className="item modalMenu-item"
+            to="/qui-sommes-nous"
+            onClick={handleOpenModalMenu}
+          >
             <div className="modalMenu-containerItem">
               <img src={whoGif} alt="gif" className="modalMenu-iconGif" />
               <div className="header modalMenu-header">Qui sommes-nous?</div>
             </div>
           </NavLink>
-          <NavLink className="item modalMenu-item" to="/agenda">
+          <NavLink
+            className="item modalMenu-item"
+            to="/agenda"
+            onClick={handleOpenModalMenu}
+          >
             <div className="modalMenu-containerItem">
               <img src={eventGif} alt="gif" className="modalMenu-iconGif" />
               <div className="header modalMenu-header">
@@ -45,6 +53,7 @@ const MenuModal = () => {
           <NavLink
             className="item modalMenu-item"
             to="/nous-avons-besoin-de-vous"
+            onClick={handleOpenModalMenu}
           >
             <div className="modalMenu-containerItem">
               <img src={helpGif} alt="gif" className="modalMenu-iconGif" />
@@ -53,13 +62,21 @@ const MenuModal = () => {
               </div>
             </div>
           </NavLink>
-          <NavLink className="item modalMenu-item" to="/blog">
+          <NavLink
+            className="item modalMenu-item"
+            to="/blog"
+            onClick={handleOpenModalMenu}
+          >
             <div className="modalMenu-containerItem">
               <img src={blogGif} alt="gif" className="modalMenu-iconGif" />
               <div className="header modalMenu-header">Blog</div>
             </div>
           </NavLink>
-          <NavLink className="item modalMenu-item" to="/galerie">
+          <NavLink
+            className="item modalMenu-item"
+            to="/galerie"
+            onClick={handleOpenModalMenu}
+          >
             <div className="modalMenu-containerItem">
               <img src={photoGif} alt="gif" className="modalMenu-iconGif" />
               <div className="header modalMenu-header">
@@ -71,25 +88,38 @@ const MenuModal = () => {
             className="item modalMenu-item"
             to="https://www.helloasso.com/associations/la-montacutaine/boutiques/boutique-de-la-montacutaine?_gl=1%2a1yxipo2%2a_ga%2aMTIzMDcwNTcwNC4xNjk5NTI2NTE4%2a_ga_TKC826G3G2%2aMTY5OTUzMjI1Ni4xLjEuMTY5OTUzNDUzNy41My4wLjA.&_ga=2.166293246.1307840424.1699526518-1230705704.1699526518&_gac=1.188626522.1699532230.Cj0KCQiAo7KqBhDhARIsAKhZ4ujW_Jun7ozSZpnScT2QEHdUyDUXlZLlp_qJfx24OocesfNNVJrZTSsaAit4EALw_wcB"
             target="_blanck"
+            onClick={handleOpenModalMenu}
           >
             <div className="modalMenu-containerItem">
               <img src={shopGif} alt="gif" className="modalMenu-iconGif" />
               <div className="header modalMenu-header">Boutique</div>
             </div>
           </NavLink>
-          <NavLink className="item modalMenu-item" to="/contactez-nous">
+          <NavLink
+            className="item modalMenu-item"
+            to="/contactez-nous"
+            onClick={handleOpenModalMenu}
+          >
             <div className="modalMenu-containerItem">
               <img src={contactGif} alt="gif" className="modalMenu-iconGif" />
               <div className="header modalMenu-header">Contactez-nous</div>
             </div>
           </NavLink>
-          <NavLink className="item modalMenu-item" to="">
+          <NavLink
+            className="item modalMenu-item"
+            to=""
+            onClick={handleOpenModalMenu}
+          >
             <div className="modalMenu-containerItem">
               <img src={settingGif} alt="gif" className="modalMenu-iconGif" />
               <div className="header modalMenu-header">Se connecter</div>
             </div>
           </NavLink>
-          <NavLink className="item modalMenu-item" to="/espace-membre">
+          <NavLink
+            className="item modalMenu-item"
+            to="/espace-membre"
+            onClick={handleOpenModalMenu}
+          >
             <div className="modalMenu-containerItem">
               <img src={settingGif} alt="gif" className="modalMenu-iconGif" />
               <div className="header modalMenu-header">Espace membre</div>

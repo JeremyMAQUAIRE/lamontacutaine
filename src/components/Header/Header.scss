@@ -1,8 +1,10 @@
 @use '../../styles/variables' as v;
 
 .header-content {
-  position: fixed;
-  z-index: 100;
+  position: fixed!important;
+  top: 0!important;
+  width: 100%;
+  z-index: 1000!important;
   border-bottom: 1px solid v.$second_color_weight!important;
   background: linear-gradient(90deg, rgba(18,48,136,1) 0%, rgba(204,218,255,1) 20%, rgba(204,218,255,1) 80%, rgba(18,48,136,1) 100%)!important;
   display: flex;
@@ -10,7 +12,7 @@
   justify-content: space-between;
   padding: 0!important;
   margin: 0 !important;
-  height: 7vh;
+  height: 8vh;
 }
 
 .header-h2 {

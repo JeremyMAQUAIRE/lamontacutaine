@@ -6,17 +6,18 @@ import {
   Image,
   Button,
 } from 'semantic-ui-react';
-
-import logo from '../../assets/logoFull.webp';
-import LoginModal from '../Modal/LoginModal/LoginModal';
-
-import './Header.scss';
+import { NavLink } from 'react-router-dom';
 import { AppDispatch } from '../store/store';
 import {
   actionToggleIsOpenModalLogin,
   actionToggleIsOpenModalMenu,
 } from '../store/actionscreator';
+
+import logo from '../../assets/logoFull.webp';
+import LoginModal from '../Modal/LoginModal/LoginModal';
 import MenuModal from '../Modal/MenuModal/MenuModal';
+
+import './Header.scss';
 
 const Header = () => {
   const dispatch: AppDispatch = useDispatch();
@@ -39,7 +40,9 @@ const Header = () => {
           </button>
         </SemanticHeader>
         <SemanticHeader as="h2" className="header-h2 header-center">
-          <Image src={logo} className="header-logo" />
+          <NavLink to="/">
+            <Image src={logo} className="header-logo" />
+          </NavLink>
         </SemanticHeader>
         <SemanticHeader className="header-button header-right">
           <Button

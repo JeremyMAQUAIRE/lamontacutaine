@@ -60,9 +60,20 @@
 .about-section2-button, .about-section4-button-report {
   width: 45%;
   margin: .5em!important;
+  padding: 0.5em;
+  border-radius: 10px;
   background: linear-gradient(90deg, rgba(255, 251, 213, 1) 0%, rgba(186, 151, 4, 1) 90%)!important;
-  color: v.$second_color_weight!important;
+  color: v.$second_color_weight!important;  
 }
+
+.about-section2-button {
+  text-align: center;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  font-weight: 600;
+}
+
 
 .about-section2-button:hover, .about-section4-button-report:hover {
   background: linear-gradient(90deg, rgba(255, 251, 213, 1) 60%, rgba(186, 151, 4, 1) 100%)!important;
@@ -200,11 +211,17 @@
     flex-wrap: nowrap;
   }
 
+  #governance, #moralReport, #activityReport, #financialreport {
+    scroll-margin-top: 8vh;
+  }
+
   .about-section2-button, .about-section4-button-report {
     width: 80%;
-    margin: .8em!important;
+    margin: 1.2em!important;
+    padding: .8em;
     font-size: 1.2em!important;
     line-height: 1.5em!important;
+    border-radius: 10px;
   }
 
   .about-section3-grid {
@@ -233,6 +250,9 @@
     text-align: center;
   }
   
+  .about-section4-adobe {
+    margin-top: -5.5em!important;
+  }
 }
 
 
