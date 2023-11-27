@@ -65,7 +65,11 @@ const AboutUS = () => {
             <Grid.Column width={4} verticalAlign="middle">
               <Image src={damien} size="medium" circular />
             </Grid.Column>
-            <Grid.Column width={12} className="about-section3-column">
+            <Grid.Column
+              width={12}
+              verticalAlign="middle"
+              className="about-section3-column"
+            >
               <Segment className="about-section3-segment about-section3-name">
                 LABRE Damien
               </Segment>
@@ -81,7 +85,11 @@ const AboutUS = () => {
             <Grid.Column width={4} verticalAlign="middle">
               <Image src={valerie} size="medium" circular />
             </Grid.Column>
-            <Grid.Column width={12} className="about-section3-column">
+            <Grid.Column
+              width={12}
+              verticalAlign="middle"
+              className="about-section3-column"
+            >
               <Segment className="about-section3-segment about-section3-name">
                 ROOSE Valérie
               </Segment>
