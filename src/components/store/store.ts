@@ -2,12 +2,14 @@ import { configureStore } from '@reduxjs/toolkit';
 import flyerHomeReducer from './reducers/flyerHomeReducer';
 import modalReducer from './reducers/modalReducer.';
 import reportReducer from './reducers/reportReducer';
+import userReducer from './reducers/userReducer';
 
 const store = configureStore({
   reducer: {
     flyerHomeReducer,
     modalReducer,
     reportReducer,
+    userReducer,
   },
 });
 

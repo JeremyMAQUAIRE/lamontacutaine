@@ -17,6 +17,9 @@ import { actionToggleIsOpenModalMenu } from '../../store/actionscreator';
 
 const MenuModal = () => {
   const dispatch: AppDispatch = useDispatch();
+  const isConnected = useSelector(
+    (state: RootState) => state.userReducer.isConnected
+  );
   const open = useSelector(
     (state: RootState) => state.modalReducer.isOpenModalMenu
   );
@@ -105,26 +108,30 @@ const MenuModal = () => {
               <div className="header modalMenu-header">Contactez-nous</div>
             </div>
           </NavLink>
-          <NavLink
-            className="item modalMenu-item"
-            to=""
-            onClick={handleOpenModalMenu}
-          >
-            <div className="modalMenu-containerItem">
-              <img src={settingGif} alt="gif" className="modalMenu-iconGif" />
-              <div className="header modalMenu-header">Se connecter</div>
-            </div>
-          </NavLink>
-          <NavLink
-            className="item modalMenu-item"
-            to="/espace-membre"
-            onClick={handleOpenModalMenu}
-          >
-            <div className="modalMenu-containerItem">
-              <img src={settingGif} alt="gif" className="modalMenu-iconGif" />
-              <div className="header modalMenu-header">Espace membre</div>
-            </div>
-          </NavLink>
+          {!isConnected && (
+            <NavLink
+              className="item modalMenu-item"
+              to=""
+              onClick={handleOpenModalMenu}
+            >
+              <div className="modalMenu-containerItem">
+                <img src={settingGif} alt="gif" className="modalMenu-iconGif" />
+                <div className="header modalMenu-header">Se connecter</div>
+              </div>
+            </NavLink>
+          )}
+          {isConnected && (
+            <NavLink
+              className="item modalMenu-item"
+              to="/espace-membre"
+              onClick={handleOpenModalMenu}
+            >
+              <div className="modalMenu-containerItem">
+                <img src={settingGif} alt="gif" className="modalMenu-iconGif" />
+                <div className="header modalMenu-header">Espace membre</div>
+              </div>
+            </NavLink>
+          )}
         </div>
       </nav>
     </Modal>

@@ -1,0 +1,40 @@
+@use '../../styles/variables' as v;
+
+.agenda-content {
+  margin-top: 8vh!important;
+  background-color: v.$main_color_light;
+}
+
+.agenda-title {
+  position: relative;
+  font-size: 1.6em;
+  color: #ba9704;
+  text-align: center;
+  padding-top: 1em!important;
+  animation: slideChange 3s ease, ColorChange 2s infinite alternate;
+}
+
+.agenda-cardEvent {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+@keyframes ColorChange {
+  0% {
+    color: #ba9704;
+  }
+  100% {
+    color: #123088;
+  }
+}
+
+@keyframes slideChange {
+  0% {
+    left: -100%; /* Start off-screen to the left */
+  }
+  100% {
+    left: 0; /* Move to the original position */
+  }
+}

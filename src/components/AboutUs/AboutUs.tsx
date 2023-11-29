@@ -17,9 +17,9 @@ import emilie from '../../assets/image/profil/emilie.png';
 import thomas from '../../assets/image/profil/thomas.png';
 import fred from '../../assets/image/profil/fred.png';
 import margaux from '../../assets/image/profil/margaux.png';
+import fetchReport from '../store/thunks/reportThunk';
 
 import './AboutUs.scss';
-import fetchReport from '../store/thunks/reportThunk';
 
 gsap.registerPlugin(ScrollTrigger);
 
