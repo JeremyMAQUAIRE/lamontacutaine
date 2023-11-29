@@ -20,6 +20,16 @@
   flex-wrap: wrap;
 }
 
+@media (min-width: 768px) { 
+  .agenda-title {
+    font-size: 3em;
+  }
+
+  .agenda-cardEvent {
+    width: 70%;
+    margin: auto;
+  }
+}
 
 @keyframes ColorChange {
   0% {
