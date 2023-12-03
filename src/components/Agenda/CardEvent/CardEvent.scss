@@ -57,6 +57,10 @@
   }
 }
 
+.cardEvent-content:hover {
+  scale: 1.05;
+}
+
 @media (max-width: 767px) {
   .cardEvent-content {
     .image img {

@@ -3,6 +3,7 @@ import flyerHomeReducer from './reducers/flyerHomeReducer';
 import modalReducer from './reducers/modalReducer.';
 import reportReducer from './reducers/reportReducer';
 import userReducer from './reducers/userReducer';
+import agendaReducer from './reducers/agendaReducer';
 
 const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ const store = configureStore({
     modalReducer,
     reportReducer,
     userReducer,
+    agendaReducer,
   },
 });
 

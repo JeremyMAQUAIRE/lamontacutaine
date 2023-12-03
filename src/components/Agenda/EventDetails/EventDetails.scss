@@ -1,0 +1,103 @@
+@use '../../../styles/variables' as v;
+
+.eventDetail-content {
+  margin-top: 8vh;
+  padding-bottom: 2em;
+  background-color: v.$main_color_light;
+}
+
+.eventDetail-left{
+  width: 90%;
+  margin: auto;
+}
+
+.eventDetail-title {
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  color: v.$second_color_weight;
+}
+
+.eventDetail-description {
+  text-align: justify;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.eventDetail-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0.1rem;
+}
+
+.eventDetail-images {
+  margin: 1rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.eventDetail-date,
+.eventDetail-price {
+  flex: 1;
+  min-width: 42%;
+  padding: 0.5rem;
+  height: 15vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Couleur du texte */
+}
+
+.eventDetail-date {
+  background-color: v.$second_color_weight;
+}
+
+.eventDetail-price {
+  background-color: v.$main_color_weight;
+}
+
+.eventDetail-picture img {
+  width: 85%;
+  margin: auto;
+  height: 50vh;
+  display: block;
+  object-fit: cover;
+  padding: 0.5em 0;
+  animation: slideInFromRight 2s ease-out; // Appliquer l'animation et tu peux régler le time ici
+}
+
+.eventDetail-button-link {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.7rem 3rem;
+  background-color: v.$main_color_light;
+  color: v.$second_color_weight;
+  text-align: center;
+  border: 1px solid v.$second_color_weight;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.eventDetail-button-link:hover {
+  background-color: v.$second_color_weight;
+  color: v.$second_color_light;
+}
+
+// css pour régler l'animation slideInFromRight
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

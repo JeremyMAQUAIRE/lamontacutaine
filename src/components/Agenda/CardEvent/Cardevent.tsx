@@ -15,7 +15,7 @@ interface CardEventProps {
 }
 
 const boxVariant = {
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+  visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
   hidden: { opacity: 0, scale: 0 },
 };
 
@@ -43,7 +43,7 @@ const CardEvent = ({
       initial="hidden"
       animate={control}
     >
-      <Link to={`/event-detail/${eventId}`} className="cardEvent-link">
+      <Link to={`/evenement/${eventId}`} className="cardEvent-link">
         <Card
           className="cardEvent-content"
           image={imageUrl}
