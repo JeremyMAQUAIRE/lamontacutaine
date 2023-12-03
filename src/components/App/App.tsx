@@ -7,6 +7,7 @@ import AboutUS from '../AboutUs/AboutUs';
 import Agenda from '../Agenda/Agenda';
 import EventDetail from '../Agenda/EventDetails/EventDetails';
 import ContactUs from '../ContactUs/ContactUs';
+import BuildPage from '../BuildPage/BuildPage';
 
 function App() {
   return (
@@ -18,6 +19,16 @@ function App() {
         <Route path="/agenda" element={<Agenda />} />
         <Route path="/evenement/:eventId" element={<EventDetail />} />
         <Route path="/nous-contacter" element={<ContactUs />} />
+        <Route
+          path="/blog"
+          element={<BuildPage message="Bientôt votre blog" />}
+        />
+        <Route
+          path="/galerie"
+          element={
+            <BuildPage message="Bientôt la galerie photo et l'espace Presse" />
+          }
+        />
       </Routes>
       <Footer />
     </div>
