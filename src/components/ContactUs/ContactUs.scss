@@ -1,0 +1,22 @@
+@use '../../styles/variables' as v;
+
+.contactUs-content {
+  display: flex;
+  flex-direction: column;
+  background-color: v.$main_color_light;
+  align-items: center;
+  margin-top: 8vh;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  gap: 2em;
+}
+
+
+@media (max-width: 767px) {
+  .contactUs-content {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+
