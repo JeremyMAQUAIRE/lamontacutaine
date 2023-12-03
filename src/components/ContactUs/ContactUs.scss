@@ -11,12 +11,10 @@
   gap: 2em;
 }
 
-
-@media (max-width: 767px) {
+@media screen and (min-width: 767px) {
   .contactUs-content {
-    display: flex;
-    flex-direction: row;
+    flex-direction: row !important;
+    justify-content: center;
+    height: 80vh;
   }
 }
-
-

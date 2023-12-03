@@ -1,7 +1,7 @@
-import { Card, Grid, Image } from 'semantic-ui-react';
+import { Card, Image } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
-import '../ContactUs.scss';
+import './CardContact.scss';
 
 interface ICardContactUsProps {
   title: string;
@@ -17,20 +17,18 @@ const CardContactUs = ({
   link,
 }: ICardContactUsProps) => {
   return (
-    <div className="all-cards-we-need-you">
-      <Grid.Column>
-        <div className="cards-we-need-you">
-          <Link className="form-link-we-need-you" to={link}>
-            <Card className="cards-size-we-need-you">
-              <Image src={image} />
-              <Card.Content>
-                <Card.Header>{title}</Card.Header>
-                <Card.Description>{description}</Card.Description>
-              </Card.Content>
-            </Card>
-          </Link>
-        </div>
-      </Grid.Column>
+    <div className="cardContactUs-content">
+      <Link className="cardContactUs-link" to={link}>
+        <Card className="cardContactUs-card">
+          <Image src={image} className="cardContactUs-image" />
+          <Card.Content className="cardContactUs-cardContent">
+            <Card.Header>{title}</Card.Header>
+            <Card.Description className="cardContactUs-description">
+              {description}
+            </Card.Description>
+          </Card.Content>
+        </Card>
+      </Link>
     </div>
   );
 };
