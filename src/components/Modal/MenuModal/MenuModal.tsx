@@ -13,7 +13,10 @@ import blogGif from '../../../assets/image/gif/icons8-conversation.gif';
 
 import './MenuModal.scss';
 import { AppDispatch, RootState } from '../../store/store';
-import { actionToggleIsOpenModalMenu } from '../../store/actionscreator';
+import {
+  actionToggleIsOpenModalMenu,
+  actionToggleIsOpenModalMenuLogin,
+} from '../../store/actionscreator';
 
 const MenuModal = () => {
   const dispatch: AppDispatch = useDispatch();
@@ -25,6 +28,9 @@ const MenuModal = () => {
   );
   const handleOpenModalMenu = () => {
     dispatch(actionToggleIsOpenModalMenu());
+  };
+  const handleOpenModalMenuLogin = () => {
+    dispatch(actionToggleIsOpenModalMenuLogin());
   };
 
   return (
@@ -112,7 +118,7 @@ const MenuModal = () => {
             <NavLink
               className="item modalMenu-item"
               to=""
-              onClick={handleOpenModalMenu}
+              onClick={handleOpenModalMenuLogin}
             >
               <div className="modalMenu-containerItem">
                 <img src={settingGif} alt="gif" className="modalMenu-iconGif" />
