@@ -1,0 +1,7 @@
+@use '../../styles/variables' as v;
+
+.formContact-content {
+  background-color: v.$main_color_light;
+  margin-top: 8vh;
+  min-height: 80vh;
+}

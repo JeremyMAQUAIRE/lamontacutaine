@@ -14,7 +14,7 @@ const ContactUs = () => {
           title="REJOIGNEZ-NOUS !"
           description="Devenir membre de La Montacutaine, c'est la manière la plus concrète de contribuer."
           image={iconJoinUs}
-          link="/rejoignez-nous"
+          link="/rejoignez-nous/contacter-nous"
         />
 
         <CardContactUs
