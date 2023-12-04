@@ -1,6 +1,6 @@
 @use '../../styles/variables' as v;
 
-.contactUs-content {
+.HelpUs-content {
   display: flex;
   flex-direction: column;
   background-color: v.$main_color_light;
@@ -12,7 +12,7 @@
 }
 
 @media screen and (min-width: 767px) {
-  .contactUs-content {
+  .HelpUs-content {
     flex-direction: row !important;
     justify-content: center;
     height: 80vh;

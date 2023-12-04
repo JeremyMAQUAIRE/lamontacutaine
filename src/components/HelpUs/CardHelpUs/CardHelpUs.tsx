@@ -1,7 +1,7 @@
 import { Card, Image } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
-import './CardContact.scss';
+import './CardHelpUs.scss';
 
 interface ICardContactUsProps {
   title: string;
@@ -10,20 +10,20 @@ interface ICardContactUsProps {
   link: string;
 }
 
-const CardContactUs = ({
+const CardHelpUs = ({
   title,
   description,
   image,
   link,
 }: ICardContactUsProps) => {
   return (
-    <div className="cardContactUs-content">
-      <Link className="cardContactUs-link" to={link}>
-        <Card className="cardContactUs-card">
-          <Image src={image} className="cardContactUs-image" />
-          <Card.Content className="cardContactUs-cardContent">
+    <div className="CardHelpUs-content">
+      <Link className="CardHelpUs-link" to={link}>
+        <Card className="CardHelpUs-card">
+          <Image src={image} className="CardHelpUs-image" />
+          <Card.Content className="CardHelpUs-cardContent">
             <Card.Header>{title}</Card.Header>
-            <Card.Description className="cardContactUs-description">
+            <Card.Description className="CardHelpUs-description">
               {description}
             </Card.Description>
           </Card.Content>
@@ -33,4 +33,4 @@ const CardContactUs = ({
   );
 };
 
-export default CardContactUs;
+export default CardHelpUs;

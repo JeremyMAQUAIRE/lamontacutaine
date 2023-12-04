@@ -1,11 +1,11 @@
 @use '../../../styles/variables' as v;
 
-.cardContactUs-image {
+.CardHelpUs-image {
   height: 10em;
   object-fit: initial;
 }
 
-.cardContactUs-cardContent {
+.CardHelpUs-cardContent {
   text-align: center;
   background-color: v.$second_color_light!important;
   animation: slideChange 2s ease;
@@ -13,15 +13,15 @@
 }
 
 @media screen and (min-width: 767px) {
-  .cardContactUs-image {
+  .CardHelpUs-image {
     height: 20em;
   }
 
-  .cardContactUs-card {
+  .CardHelpUs-card {
     transition: transform 2s ease;
   }
   
-  .cardContactUs-card:hover {
+  .CardHelpUs-card:hover {
     transform: translateY(-20px);
     border: 2px solid v.$second_color_weight!important;
   }

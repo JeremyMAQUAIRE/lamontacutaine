@@ -2,6 +2,63 @@
 
 .formContact-content {
   background-color: v.$main_color_light;
-  margin-top: 8vh;
   min-height: 80vh;
+  padding: 1em 5% 0 5%;
+  margin-top: 8vh;
+}
+
+.formContact-title {
+  position: relative;
+  font-size: 1.6em;
+  color: #ba9704;
+  text-align: center;
+  padding-top: 1em!important;
+  // Keyframe est dans le ficher Agenda/Agenda.scss
+  animation: slideChange 3s ease, ColorChange 2s infinite alternate;
+}
+
+.formContact-label {
+  width: 100%;
+  font-size: 1.1em!important;
+}
+
+.contactInfo-logo {
+  margin-top: -10vh!important;
+  // Keyframe est dans le ficher AboutUs/AboutUs.scss
+  animation: wiggle 2s linear infinite;
+}
+
+.contactInfo-image {
+  margin-top: -10vh!important;
+  padding-bottom: 2em;
+}
+
+@media (min-width: 768px) { 
+  .formContact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .formContact-form{
+    width: 90%;
+  }
+
+  .formContact-left, .formContact-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contactInfo-logo {
+    height: 30em;
+  }
+
+  .contactInfo-image {
+    height: 30em;
+    width: 30em;
+     // Keyframe est dans le ficher EventDetails/EventDetails.scss
+    animation: slideInFromRight 2s ease-out;
+  }
 }

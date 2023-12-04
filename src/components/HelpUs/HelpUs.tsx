@@ -2,14 +2,14 @@ import iconJoinUs from '../../assets/image/contactUs/rejoignez-nous.png';
 import iconBoxIdea from '../../assets/image/contactUs/boiteaIdee.png';
 import iconDonation from '../../assets/image/contactUs/don.png';
 import iconSponsor from '../../assets/image/contactUs/sponsor.png';
-import CardContactUs from './CardConctactUs/CardContactUs';
+import CardContactUs from './CardHelpUs/CardHelpUs';
 
-import './ContactUs.scss';
+import './HelpUs.scss';
 
-const ContactUs = () => {
+const HelpUs = () => {
   return (
     <div>
-      <div className="contactUs-content">
+      <div className="HelpUs-content">
         <CardContactUs
           title="REJOIGNEZ-NOUS !"
           description="Devenir membre de La Montacutaine, c'est la manière la plus concrète de contribuer."
@@ -42,4 +42,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default HelpUs;

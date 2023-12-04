@@ -6,9 +6,9 @@ import Home from '../Home/Home';
 import AboutUS from '../AboutUs/AboutUs';
 import Agenda from '../Agenda/Agenda';
 import EventDetail from '../Agenda/EventDetails/EventDetails';
-import ContactUs from '../ContactUs/ContactUs';
 import BuildPage from '../BuildPage/BuildPage';
 import FormContact from '../FormContact/FormContact';
+import HelpUs from '../HelpUs/HelpUs';
 
 function App() {
   return (
@@ -19,8 +19,11 @@ function App() {
         <Route path="/qui-sommes-nous" element={<AboutUS />} />
         <Route path="/agenda" element={<Agenda />} />
         <Route path="/evenement/:eventId" element={<EventDetail />} />
-        <Route path="/nous-contacter" element={<ContactUs />} />
-        <Route path="rejoignez-nous/contacter-nous" element={<FormContact />} />
+        <Route path="/nous-rejoindre" element={<HelpUs />} />
+        <Route
+          path="/nous-rejoindre/contacter-nous"
+          element={<FormContact />}
+        />
         <Route
           path="/blog"
           element={<BuildPage message="Bientôt votre blog" />}
@@ -31,6 +34,7 @@ function App() {
             <BuildPage message="Bientôt la galerie photo et l'espace Presse" />
           }
         />
+        <Route path="/contactez-nous" element={<FormContact />} />
       </Routes>
       <Footer />
     </div>

@@ -55,7 +55,7 @@ const MenuModal = () => {
           </NavLink>
           <NavLink
             className="item modalMenu-item"
-            to="/nous-contacter"
+            to="/nous-rejoindre"
             onClick={handleOpenModalMenu}
           >
             <div className="modalMenu-containerItem">

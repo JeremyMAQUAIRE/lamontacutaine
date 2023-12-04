@@ -1,53 +1,57 @@
 import { Form, TextArea, Input, Select, Image } from 'semantic-ui-react';
 
-import logo from '../../assets/logoFull.webp';
-import eglise from '../../assets/image/egliseMontaigut.png';
-
 import './FormContact.scss';
-
-const options = [
-  { key: 'a', text: 'Devenir adhérent', value: 'devenir-adherent' },
-  { key: 'b', text: 'Boite à idée', value: 'boite-a-idee' },
-  { key: 'o', text: 'Nous sponsoriser', value: 'nous-sponsoriser' },
-  {
-    key: 'l',
-    text: 'Nous laisser un commentaire',
-    value: 'laissez-nous-un-commentaire',
-  },
-  { key: 'x', text: 'Autres', value: 'autre' },
-];
+import ContactInfo from './ContactInfo';
 
 const FormContact = () => {
   return (
     <div className="formContact-content">
-      <div>
-        <h1> Contactez-nous ! </h1>
-        <p> Une question, envoyez-nous un message </p>
-        <Form>
-          <Select options={options} defaultValue="autre" />
-          <Form.Field control={Input}>
-            <label htmlFor="#">Nom</label>
-            <input />
-          </Form.Field>
-          <Form.Field control={Input}>
-            <label htmlFor="#">Prénom</label>
-            <input />
-          </Form.Field>
-          <Form.Field control={Input}>
-            <label htmlFor="#">Mail</label>
-            <input />
-          </Form.Field>
+      <div className="formContact-left">
+        <h1 className="formContact-title"> Contactez-nous ! </h1>
+        <Form className="formContact-form">
           <Form.Field
-            id="form-textarea-control-opinion"
-            control={TextArea}
-            label="Opinion"
-            placeholder="Opinion"
-          />
+            label="Choix"
+            control="select"
+            className="formContact-label"
+          >
+            <option value="devenir-adherent">Devenir adhérent</option>
+            <option value="boite-a-idee">Boite à idée</option>
+            <option value="nous-sponsoriser">Nous sponsoriser</option>
+            <option value="laissez-nous-un-commentaire">
+              Laisser un commentaire
+            </option>
+            <option value="autre" defaultChecked>
+              Autres
+            </option>
+          </Form.Field>
+          <Form.Field>
+            <label htmlFor="#" className="formContact-label">
+              Nom
+            </label>
+            <input />
+          </Form.Field>
+          <Form.Field>
+            <label htmlFor="#" className="formContact-label">
+              Prénom
+            </label>
+            <input />
+          </Form.Field>
+          <Form.Field>
+            <label htmlFor="#" className="formContact-label">
+              Mail
+            </label>
+            <input />
+          </Form.Field>
+          <Form.Field>
+            <label htmlFor="#" className="formContact-label">
+              Message
+            </label>
+            <textarea />
+          </Form.Field>
         </Form>
       </div>
-      <div>
-        <Image src={logo} />
-        <Image src={eglise} />
+      <div className="formContact-right">
+        <ContactInfo />
       </div>
     </div>
   );
