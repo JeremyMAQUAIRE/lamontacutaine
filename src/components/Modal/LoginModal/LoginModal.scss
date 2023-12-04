@@ -1,0 +1,47 @@
+@use '../../../styles/variables' as v;
+
+.modalLogin-content {
+  position: fixed;
+  right: 2em;
+  top: 8vh;
+  width: 450px!important;
+}
+
+.modalLogin-header{
+  background-color: v.$second_color_light!important;
+  color: v.$second_color_weight!important;
+  text-align: center;
+}
+
+.modalLogin-field {
+  width: 100%;
+}
+
+.modalLogin-label{
+  padding-bottom: .5em!important;
+  color: v.$main_color_weight!important;
+}
+
+.modalLogin-input{
+  width: 100%!important;
+}
+
+.modalLogin-formContent {
+  background-color: v.$main_color_light!important;
+}
+
+.modalLogin-actions {
+  background-color: v.$second_color_light!important;
+  text-align: center!important;
+}
+
+.modalLogin-buttonConnexion {
+  background-color: v.$main_color_light!important;
+  color: v.$main_color_weight!important;
+  margin-bottom: 1em!important;
+}
+
+.modalLogin-buttonPassword {
+  background-color: transparent!important;
+  color: v.$second_color_weight!important; 
+}

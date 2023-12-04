@@ -1,0 +1,35 @@
+.home-content {
+  position: relative;
+}
+
+.carousel-root {
+  max-width: 100%;
+}
+
+.sliderHome {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.carouselSlide img {
+  max-width: 100%;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+}
+
+.thumbs-wrapper {
+  margin: 0!important;
+}
+
+.control-dots, .control-arrow.control-next,.control-arrow.control-prev, .thumbs, .carousel-status{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .carouselSlide img {
+    width: 100%;
+    height: auto;
+  }
+}

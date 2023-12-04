@@ -1,0 +1,60 @@
+@use '../../styles/variables' as v;
+
+.footer-content {
+  background-color: v.$main_color_light;
+}
+
+.footer-container-sponsor {
+  display: flex;
+  justify-content: center;
+  align-self: center!important;
+}
+
+.ui.container.doubling.stackable.five.column.grid.footer-container-link{
+  align-items: center!important;
+  width: 100%!important;
+}
+
+.button-footer {
+  border: none;
+  // Pour mettre le backgroud en transparent
+  background-color: rgba(76, 175, 80, 0)!important;
+}
+
+.footer-container-link {
+  border-top: 3px solid v.$main_color_weight;
+  border-bottom: 3px solid v.$main_color_weight;
+  margin: auto!important;
+  text-align: center;
+}
+
+#footer-link .button-footer {
+  padding: .3em 0!important;
+}
+
+.link-a-footer {
+  color: black;
+}
+
+.link-a-footer:hover {
+  scale: 1.2!important;
+  font-weight: 600;
+  color: v.$second_color_weight;
+}
+
+@media screen and (min-width: 767px) {
+  .link-a-footer {
+    font-size: 1.2em;
+    padding: .5em 0!important;
+  }
+
+  .footer-image {
+    width: 50%;
+    margin: auto;
+  }
+
+  .footer-image:hover {
+    scale: 1.2!important;
+  }
+  
+}

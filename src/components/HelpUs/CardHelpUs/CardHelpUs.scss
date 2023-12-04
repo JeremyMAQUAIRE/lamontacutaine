@@ -1,0 +1,38 @@
+@use '../../../styles/variables' as v;
+
+.CardHelpUs-image {
+  height: 10em;
+  object-fit: initial;
+}
+
+.CardHelpUs-cardContent {
+  text-align: center;
+  background-color: v.$second_color_light!important;
+  animation: slideChange 2s ease;
+  position: relative; /* Add this line */
+}
+
+@media screen and (min-width: 767px) {
+  .CardHelpUs-image {
+    height: 20em;
+  }
+
+  .CardHelpUs-card {
+    transition: transform 2s ease;
+  }
+  
+  .CardHelpUs-card:hover {
+    transform: translateY(-20px);
+    border: 2px solid v.$second_color_weight!important;
+  }
+}
+
+@keyframes slideChange {
+  0% {
+    left: -100%; /* Start off-screen to the left */
+  }
+  100% {
+    left: 0; /* Move to the original position */
+  }
+}
+

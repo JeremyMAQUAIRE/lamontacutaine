@@ -1,0 +1,74 @@
+@use '../../../styles/variables' as v;
+
+.cardEvent-link {
+  width: 80%;
+}
+
+.cardEvent-content {
+  width: 100%;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2)!important;
+  margin: 1em 0!important;
+
+
+  .image img {
+    width: 100%;
+    height: auto;
+    max-height: 150px!important;
+    object-fit: cover;
+  }
+
+  .content {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header,
+  .meta,
+  .description {
+    padding: 0.05em;
+  }
+
+  .header {
+    font-size: 1em!important;
+    text-align: center!important;
+    color: v.$second_color_weight!important;
+    overflow: hidden!important;
+    display: -webkit-box!important;
+    -webkit-line-clamp: 2!important;
+    -webkit-box-orient: vertical!important;
+    text-overflow: ellipsis!important;
+  }
+
+  .meta{
+    text-align: center!important;
+    color: v.$main_color_weight!important;
+  }
+
+  .description {
+    font-size: 0.6!important;
+    text-align: justify!important;
+    font-style: italic;
+    overflow: hidden!important;
+    display: -webkit-box!important;
+    -webkit-line-clamp: 10!important;
+    -webkit-box-orient: vertical!important;
+    text-overflow: ellipsis!important;
+  }
+}
+
+.cardEvent-content:hover {
+  scale: 1.05;
+}
+
+@media (max-width: 767px) {
+  .cardEvent-content {
+    .image img {
+      min-height: 150px;
+    }
+
+    .content {
+      min-height: 80px;
+    }
+  }
+}

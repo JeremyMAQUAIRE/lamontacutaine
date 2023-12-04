@@ -1,0 +1,123 @@
+@use '../../styles/variables' as v;
+
+.waiting-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  color: v.$second_color_weight;
+  background-color: v.$main_color_light;
+  font-size: 2.3rem;
+}
+
+.paragraheWPage {
+  width: 90%;
+  background-color: v.$second_color_light;
+  padding: 0.7rem;
+  border-radius: 10px;
+  margin-top: 1.8rem;
+}
+
+.waitingH2 {
+  font-size: .8em;
+  font-weight: 700;
+  margin-top: 1rem;
+  color: v.$main_color_weight;
+}
+
+.waitingP {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: v.$main_color_weight;
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.contact-button {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  background-color: v.$main_color_weight;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: v.$second_color_weight;
+    color: #fff;
+  }
+
+  @media (min-width: 768px) {
+    .waiting-page {
+      font-size: 2rem;
+    }
+
+    .waitingH2 {
+      margin-top: 3rem;
+      font-size: 3rem;
+    }
+
+    .waitingP {
+      font-size: 2.4rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .waiting-page {
+      padding: 2rem;
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+.logoAnime{
+  width: 2em; 
+  height: 2em;
+  animation: bounceLogo 4s ease-in-out infinite;
+}
+
+@media (min-width: 768px) {
+  .logoAnime{
+    width: 4em; 
+    height: 4em;
+  }
+
+  .paragraheWPage {
+    width: 50%;
+  }
+
+  .waitingP {
+    font-size: 1.3rem;
+  }
+
+  .waitingH2 {
+    font-size: 1.2em;
+  }
+}
+
+/* Définir l'animation pour le logo */
+@keyframes bounceLogo {
+  0% {
+    transform: translateX(-100%) rotate(0deg);
+  }
+  30% {
+    transform: translateX(100px) rotate(180deg);
+  }
+  60% {
+    transform: translateX(100%) rotate(360deg);
+  }
+  100% {
+    transform: translateX(-100%) rotate(360deg);
+  }
+}
+

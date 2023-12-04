@@ -1,0 +1,133 @@
+@use '../../styles/variables' as v;
+
+.header-content {
+  position: fixed!important;
+  top: 0!important;
+  width: 100%;
+  z-index: 1000!important;
+  border-bottom: 1px solid v.$second_color_weight!important;
+  background: linear-gradient(90deg, rgba(18,48,136,1) 0%, rgba(204,218,255,1) 20%, rgba(204,218,255,1) 80%, rgba(18,48,136,1) 100%)!important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0!important;
+  margin: 0 !important;
+  height: 8vh;
+}
+
+.header-h2 {
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  height: 4em !important;
+  width: 6em !important;
+}
+
+.header-menu {
+  margin-left: 0.5em !important;
+  height: 1em !important;
+  width: 1em !important;
+  color: v.$main_color_weight;
+}
+
+.header-menu-button {
+  background-color: transparent;
+  border: none;
+}
+
+.header-button-login {
+  display: none!important;
+  margin: 0!important;
+}
+
+.ui.header.header-button.header-right {
+  margin: 0;
+  display: inherit;
+  align-items: center!important;
+}
+
+.header-right {
+  margin-right: .5em!important;
+}
+
+.header-button-socialNetwork {
+  background-color: v.$main_color_light!important;
+  width: 1.5em;
+  height: 1.5em;
+  padding: .2em;
+  margin: 0 .2em;
+  align-items: center;
+  border-radius: 100%;
+}
+
+.ui.clearing.segment::after {
+  display: none!important;
+}
+
+@media screen and (min-width: 767px) {
+  .header-logo {
+    height: 6em !important;
+    width: 9em !important;
+  }
+
+  .header-menu {
+    margin-left: 1em !important;
+    height: 1.5em !important;
+    width: 1.5em !important;
+  }
+
+  .header-button-login {
+    display: inline-block!important;
+  }
+
+  .header-button {
+    display: inline-block;
+  }
+
+  .header-button-login {
+    background-color: v.$main_color_light!important;
+    color: v.$main_color_weight!important;
+  }
+
+  .header-button-login:hover {
+    background-color: v.$second_color_light!important;
+    color: v.$second_color_weight!important;
+  }
+
+  .header-right {
+    margin-right:0!important;
+    display: flex!important;
+    align-items: center;
+  }
+
+  .header-button-socialNetwork {
+    width: 2.2em;
+    height: 2.2em;
+    padding: .3em;
+    margin-left: .5em;
+    align-items: center;
+    border-radius: 100%;
+  }
+
+  .header-button-socialNetwork:hover {
+    scale :1.2;
+    background-color: v.$main_color_weight!important;
+  }
+
+
+  .header-left {
+    flex: 1!important;
+  }
+
+  .header-center {
+    flex: 5!important;
+    justify-content: center;
+  }
+
+  .header-right {
+    flex: 1!important;
+  }
+}
