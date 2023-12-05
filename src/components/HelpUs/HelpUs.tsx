@@ -38,7 +38,7 @@ const HelpUs = () => {
           title="NOUS SPONSORISER"
           description="Faites un geste en échange de publicité pour votre entreprise."
           image={iconSponsor}
-          link="/nous-sponsoriser"
+          link="/nous-sponsoriser/contacter-nous"
           choice="sponsorUS"
         />
       </div>
