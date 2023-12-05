@@ -16,7 +16,10 @@ export const actionToggleIsOpenModalNewletter = createAction(
   '@modal/TOGGLE_ISOPEN_MODAL_NEWLETTER'
 );
 
-// Gestion des rapports de l apage qui somme nous
+// Gestion des rapports de la page qui somme nous
 export const actionChangeYearMoralReport = createAction<number>('@report/CHANGE_YEAR_MORAL_REPORT');
 export const actionChangeYearActivityReport = createAction<number>('@report/CHANGE_YEAR_ACTIVITY_REPORT');
 export const actionChangeYearCountReport = createAction<number>('@report/CHANGE_YEAR_COUNT_REPORT');
+
+// Gestion des forms
+export const actionChangeFormChoice = createAction<string>('@form/CHANGE_FORM_CHOICE');

@@ -1,5 +1,5 @@
 import { Grid, Image } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../store/store';
 import { actionToggleIsOpenModalNewletter } from '../store/actionscreator';
@@ -29,9 +29,9 @@ function Footer() {
         className="footer-container-link"
       >
         <Grid.Column className="footer-link" id="footer-link">
-          <a className="link-a-footer" href="/contactez-nous">
+          <NavLink className="link-a-footer" to="/contactez-nous">
             Contactez-nous
-          </a>
+          </NavLink>
         </Grid.Column>
         <Grid.Column className="footer-link" id="footer-link">
           <Link className="link-a-footer" to="/laissez-nous-un-commentaire">

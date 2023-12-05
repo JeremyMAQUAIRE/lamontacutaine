@@ -4,6 +4,7 @@ import modalReducer from './reducers/modalReducer.';
 import reportReducer from './reducers/reportReducer';
 import userReducer from './reducers/userReducer';
 import agendaReducer from './reducers/agendaReducer';
+import formReducer from './reducers/formReducer';
 
 const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ const store = configureStore({
     reportReducer,
     userReducer,
     agendaReducer,
+    formReducer,
   },
 });
 

@@ -14,6 +14,7 @@ import blogGif from '../../../assets/image/gif/icons8-conversation.gif';
 import './MenuModal.scss';
 import { AppDispatch, RootState } from '../../store/store';
 import {
+  actionChangeFormChoice,
   actionToggleIsOpenModalMenu,
   actionToggleIsOpenModalMenuLogin,
 } from '../../store/actionscreator';
@@ -31,6 +32,10 @@ const MenuModal = () => {
   };
   const handleOpenModalMenuLogin = () => {
     dispatch(actionToggleIsOpenModalMenuLogin());
+  };
+  const handleOpenModalForm = () => {
+    dispatch(actionToggleIsOpenModalMenu());
+    dispatch(actionChangeFormChoice('joinUs'));
   };
 
   return (
@@ -107,7 +112,7 @@ const MenuModal = () => {
           <NavLink
             className="item modalMenu-item"
             to="/contactez-nous"
-            onClick={handleOpenModalMenu}
+            onClick={handleOpenModalForm}
           >
             <div className="modalMenu-containerItem">
               <img src={contactGif} alt="gif" className="modalMenu-iconGif" />

@@ -35,6 +35,11 @@ function App() {
           }
         />
         <Route path="/contactez-nous" element={<FormContact />} />
+        <Route
+          path="/rejoignez-nous/contacter-nous"
+          element={<FormContact />}
+        />
+        <Route path="/boite-a-idee/contacter-nous" element={<FormContact />} />
       </Routes>
       <Footer />
     </div>

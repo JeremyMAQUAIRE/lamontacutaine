@@ -33,11 +33,80 @@
   padding-bottom: 2em;
 }
 
+.formContact-button {
+  font-size: 1.1em!important;
+  padding: 0.5em;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(204,218,255,1) 60%, rgba(18,48,136,1) 90%)!important;
+  color: v.$main_color_weight!important;  
+}
+
+.formContact-button:hover {
+  background: linear-gradient(90deg, rgba(204,218,255,1) 90%, rgba(18,48,136,1) 100%)!important;
+}
+
+.becomeAMember-content {
+  padding-bottom: 1em;
+}
+
+.becomeAMember-item-header {
+  font-size: 1.9em!important;
+  text-align: center;
+}
+
+.becomeAMember-item-decription-job {
+  font-size: 1.7em!important;
+  text-align: center;
+  font-style: oblique;
+  margin: 0!important;
+}
+
+.becomeAMember-item-decription-phone {
+  font-size: 1.5em!important;
+  text-align: center;
+  margin: 0!important;
+}
+
+.becomeAMember-item-decription-info{
+  width: 90%;
+  margin: auto;
+  background-color: v.$second_color_light;
+  color: v.$main_color_weight;
+  font-weight: 800;
+  padding: .5em;
+  text-align: center;
+}
+
+.boxOfIdea-logo {
+  // Keyframe est dans le ficher EventDetails/EventDetails.scss
+  animation: slideInFromRight 2s ease-out;
+  width: 40em;
+}
+
+.sponsorUs-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  gap: 1em;
+}
+
+.sponsorUs-image {
+  width: 30%;
+  // Keyframe est dans le ficher EventDetails/EventDetails.scss
+  animation: slideInFromRight 2s ease-out;
+}
+
 @media (min-width: 768px) { 
   .formContact-content {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .formContact-title {
+    font-size: 3em;
   }
 
   .formContact-form{
@@ -58,7 +127,19 @@
   .contactInfo-image {
     height: 30em;
     width: 30em;
-     // Keyframe est dans le ficher EventDetails/EventDetails.scss
+    // Keyframe est dans le ficher EventDetails/EventDetails.scss
     animation: slideInFromRight 2s ease-out;
+  }
+
+  .becomeAMember-item-image {
+    margin-left: 10em!important;
+  }
+
+  .becomeAMember-item-decription-info{
+    font-size: 1.4em;
+  }
+
+  .becomeAMember-item-group{
+    text-align: center;
   }
 }

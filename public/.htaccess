@@ -8,5 +8,5 @@
   RewriteRule . /index.html [L]
 
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
-  RewriteRule (.*) https://exemple.com/$1 [R=301,L]
+  RewriteRule (.*) https://lamontacutaine.fr/$1 [R=301,L]
 </ifmodule>

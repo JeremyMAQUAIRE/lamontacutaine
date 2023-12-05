@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Link } from 'react-router-dom';
-import { Card } from 'semantic-ui-react';
 
 import './CardEvent.scss';
+import { Link } from 'react-router-dom';
+import { Card } from 'semantic-ui-react';
 
 interface CardEventProps {
   imageUrl: string;
