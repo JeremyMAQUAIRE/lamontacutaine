@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
 import {
   Bars3Icon,
   XMarkIcon,
   ChevronDownIcon,
 } from '@heroicons/react/24/outline';
+
 import logoReduit from '../../assets/logo.png';
 
 const submenu = [
-  { name: 'Qui sommes-nous ?', href: '#' },
+  { name: 'Qui sommes-nous ?', href: 'qui-sommes-nous' },
   { name: 'Nous avons besoin de vous', href: '#' },
   { name: 'Notre Agenda', href: '#' },
   { name: 'Notre blog', href: '#' },
@@ -18,6 +20,7 @@ const submenu = [
 ];
 
 const Header = () => {
+  const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showLogo, setShowLogo] = useState(false);
 
@@ -48,15 +51,19 @@ const Header = () => {
               Notre association
               <ChevronDownIcon className="ml-1 h-5 w-5" />
             </PopoverButton>
-            <PopoverPanel className="absolute left-0 mt-3 w-72 bg-white rounded-xl shadow-lg ring-1 ring-black/5 p-4 z-50">
+            <PopoverPanel className="absolute left-0 mt-3 w-90 bg-white rounded-xl shadow-lg ring-1 ring-black/5 p-4 z-50">
               {submenu.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
-                  className="block px-3 py-2 text-sm text-gray-900 hover:text-blue-600"
+                  to={item.href}
+                  className={`block text-lg font-semibold px-3 py-2 rounded-lg transition ${
+                    location.pathname === `/${item.href}`
+                      ? 'bg-yellow-100 text-yellow-900'
+                      : 'text-blue-900 hover:bg-yellow-100 hover:text-blue-900'
+                  }`}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </PopoverPanel>
           </Popover>
@@ -103,13 +110,17 @@ const Header = () => {
 
             <div className="mt-6 space-y-4">
               {[...submenu].map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
-                  className="block text-lg font-semibold text-blue-900 hover:text-yellow-600"
+                  to={item.href}
+                  className={`block text-lg font-semibold px-3 py-2 rounded-lg transition ${
+                    location.pathname === `/${item.href}`
+                      ? 'bg-yellow-100 text-yellow-900'
+                      : 'text-blue-900 hover:bg-yellow-100 hover:text-blue-900'
+                  }`}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <a
                 href="/"
