@@ -17,11 +17,14 @@ const rapports = [
 
 const RapportsSection = () => {
   return (
-    <section className="bg-white py-12 px-4 sm:px-6 lg:px-8" id="rapports">
+    <section
+      className="bg-white py-12 px-4 sm:px-6 lg:px-8 relative top-20 mb-20"
+      id="rapports"
+    >
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl font-extrabold text-blue-900 mb-6">
+        <h1 className="text-3xl font-extrabold text-blue-900 mb-6">
           📄 Rapports
-        </h2>
+        </h1>
         <p className="text-lg text-gray-700 mb-8">
           Transparence, engagement et bonne humeur&nbsp;! Retrouvez ici tous nos
           rapports officiels pour découvrir notre fonctionnement.
