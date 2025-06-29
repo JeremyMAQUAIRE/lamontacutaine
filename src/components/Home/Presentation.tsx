@@ -21,7 +21,7 @@ const Presentation = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="text-blue-900 text-justify text-base md:text-lg leading-relaxed"
+            className="text-blue-900 text-base md:text-lg leading-relaxed"
           >
             <p className="mb-4">
               L’association <strong>La Montacutaine</strong>, créée en juillet
