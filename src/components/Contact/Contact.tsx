@@ -10,6 +10,8 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 const ContactForm = () => {
+  const InstagramIcon = FaInstagram as React.ElementType;
+  const FacebookIcon = FaFacebookF as React.ElementType;
   const MailIcon = HiOutlineMail as React.ElementType;
   const PhoneIcon = HiOutlinePhone as React.ElementType;
   const LocationIcon = HiOutlineLocationMarker as React.ElementType;
@@ -82,7 +84,7 @@ const ContactForm = () => {
                 rel="noreferrer"
                 className="bg-white text-blue-900 p-3 rounded-full hover:scale-110 transition"
               >
-                <FaInstagram size={20} />
+                <InstagramIcon size={20} />
               </a>
               <a
                 href="https://facebook.com"
@@ -90,7 +92,7 @@ const ContactForm = () => {
                 rel="noreferrer"
                 className="bg-white text-blue-900 p-3 rounded-full hover:scale-110 transition"
               >
-                <FaFacebookF size={20} />
+                <FacebookIcon size={20} />
               </a>
             </div>
           </div>
