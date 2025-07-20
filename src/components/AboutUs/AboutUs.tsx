@@ -28,22 +28,22 @@ const membresBureau = [
     photo: president,
   },
   {
-    nom: 'Marie Dupont',
+    nom: 'Marie Dupont t ',
     fonction: 'Présidente',
     photo: president,
   },
   {
-    nom: 'Luc Martin',
+    nom: 'Luc Martin t',
     fonction: 'Trésorier',
     photo: president,
   },
   {
-    nom: 'Sophie Bernard',
+    nom: 'Sophie Bernard t',
     fonction: 'Secrétaire',
     photo: president,
   },
   {
-    nom: 'Équipe de bénévoles',
+    nom: 'Équipe de bénévoles "t',
     fonction: 'Une quarantaine de membres engagés !',
     photo: president,
   },

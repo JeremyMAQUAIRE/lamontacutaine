@@ -10,14 +10,16 @@ import {
 import logoReduit from '../../assets/logo.png';
 
 const submenu = [
-  { name: 'Qui sommes-nous ?', href: 'qui-sommes-nous' },
-  { name: 'Nous avons besoin de vous', href: '#' },
-  { name: 'Notre Agenda', href: '#' },
-  { name: 'Notre blog', href: '#' },
-  { name: 'Notre galerie/presse', href: '#' },
-  { name: 'Notre boutique', href: '#' },
-  { name: 'Contactez nous', href: '#' },
+  { name: 'Qui sommes-nous ?', href: '/qui-sommes-nous' },
+  { name: 'Nous avons besoin de vous', href: '/nous-avons-besoin-de-vous' },
+  { name: 'Notre Agenda', href: '/agenda' },
+  { name: 'Notre Boutique', href: '/boutique' }, // sera remplacé par un <a>
+  { name: 'Contactez nous', href: '/contact' },
 ];
+
+// URL externe pour la boutique
+const boutiqueUrl =
+  'https://www.helloasso.com/associations/la-montacutaine/boutiques/boutique-de-la-montacutaine?_gl=1%2a122nxfp%2a_gcl_au%2aOTc2MTM5NDAyLjE3NTMwMTgwNzIuMTIwMzQ3ODQ5LjE3NTMwMzEyNjIuMTc1MzAzMTI2Mg..';
 
 const Header = () => {
   const location = useLocation();
@@ -27,6 +29,39 @@ const Header = () => {
   useEffect(() => {
     setTimeout(() => setShowLogo(true), 100);
   }, []);
+
+  // Fonction utilitaire pour gérer les liens (interne vs externe)
+  const renderMenuLink = (item: { name: string; href: string }) => {
+    const isBoutique = item.name === 'Notre Boutique';
+
+    if (isBoutique) {
+      return (
+        <a
+          key={item.name}
+          href={boutiqueUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block text-lg font-semibold px-3 py-2 rounded-lg text-blue-900 hover:bg-yellow-100 hover:text-blue-900 transition"
+        >
+          {item.name}
+        </a>
+      );
+    }
+
+    return (
+      <Link
+        key={item.name}
+        to={item.href}
+        className={`block text-lg font-semibold px-3 py-2 rounded-lg transition ${
+          location.pathname === item.href
+            ? 'bg-yellow-100 text-yellow-900'
+            : 'text-blue-900 hover:bg-yellow-100 hover:text-blue-900'
+        }`}
+      >
+        {item.name}
+      </Link>
+    );
+  };
 
   return (
     <header className="bg-gradient-to-r from-blue-300 to-blue-900 shadow-md z-50 fixed w-full top-0 left-0 transition-all duration-500">
@@ -44,6 +79,7 @@ const Header = () => {
           </a>
         </div>
 
+        {/* Menu Desktop */}
         <div className="hidden lg:flex items-center gap-x-10">
           {/* Popover pour sous-menu */}
           <Popover className="relative">
@@ -52,19 +88,7 @@ const Header = () => {
               <ChevronDownIcon className="ml-1 h-5 w-5" />
             </PopoverButton>
             <PopoverPanel className="absolute left-0 mt-3 w-90 bg-white rounded-xl shadow-lg ring-1 ring-black/5 p-4 z-50">
-              {submenu.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`block text-lg font-semibold px-3 py-2 rounded-lg transition ${
-                    location.pathname === `/${item.href}`
-                      ? 'bg-yellow-100 text-yellow-900'
-                      : 'text-blue-900 hover:bg-yellow-100 hover:text-blue-900'
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {submenu.map(renderMenuLink)}
             </PopoverPanel>
           </Popover>
 
@@ -89,7 +113,7 @@ const Header = () => {
         </div>
       </nav>
 
-      {/* Mobile menu (Dialog conservé si tu le souhaites) */}
+      {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 bg-black/50 z-50 flex flex-col items-end">
           <div className="w-4/5 max-w-sm h-full bg-white p-6 rounded-l-xl shadow-2xl">
@@ -109,19 +133,7 @@ const Header = () => {
             </div>
 
             <div className="mt-6 space-y-4">
-              {[...submenu].map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`block text-lg font-semibold px-3 py-2 rounded-lg transition ${
-                    location.pathname === `/${item.href}`
-                      ? 'bg-yellow-100 text-yellow-900'
-                      : 'text-blue-900 hover:bg-yellow-100 hover:text-blue-900'
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {submenu.map(renderMenuLink)}
               <a
                 href="/"
                 className="mt-6 block w-full text-center rounded-xl bg-yellow-500 px-4 py-2 font-bold text-blue-900 hover:bg-yellow-400"
