@@ -10,6 +10,10 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 const ContactForm = () => {
+  const MailIcon = HiOutlineMail as React.ElementType;
+  const PhoneIcon = HiOutlinePhone as React.ElementType;
+  const LocationIcon = HiOutlineLocationMarker as React.ElementType;
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -56,15 +60,15 @@ const ContactForm = () => {
 
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
-                  <HiOutlineMail className="text-xl" />
+                  <MailIcon className="text-xl" />
                   contact@exemple.com
                 </li>
                 <li className="flex items-center gap-3">
-                  <HiOutlinePhone className="text-xl" />
+                  <PhoneIcon className="text-xl" />
                   +33 6 12 34 56 78
                 </li>
                 <li className="flex items-center gap-3">
-                  <HiOutlineLocationMarker className="text-xl" />
+                  <LocationIcon className="text-xl" />
                   123 Rue Principale, 75000 Paris
                 </li>
               </ul>
